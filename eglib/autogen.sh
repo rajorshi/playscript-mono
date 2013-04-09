@@ -37,15 +37,15 @@ if [ -z "$LIBTOOL" ]; then
   fi
 fi
 
-(grep "^AM_PROG_LIBTOOL" $srcdir/configure.ac >/dev/null) && {
-  ($LIBTOOL --version) < /dev/null > /dev/null 2>&1 || {
-    echo
-    echo "**Error**: You must have \`libtool' installed to compile Mono."
-    echo "Get ftp://ftp.gnu.org/pub/gnu/libtool-1.2d.tar.gz"
-    echo "(or a newer version if it is available)"
-    DIE=1
-  }
-}
+#(grep "^AM_PROG_LIBTOOL" $srcdir/configure.ac >/dev/null) && {
+#  ($LIBTOOL --version) < /dev/null > /dev/null 2>&1 || {
+#    echo
+#    echo "**Error**: You must have \`libtool' installed to compile Mono."
+#    echo "Get ftp://ftp.gnu.org/pub/gnu/libtool-1.2d.tar.gz"
+#    echo "(or a newer version if it is available)"
+#    DIE=1
+#  }
+#}
 
 grep "^AM_GNU_GETTEXT" $srcdir/configure.ac >/dev/null && {
   grep "sed.*POTFILES" $srcdir/configure.ac >/dev/null || \
